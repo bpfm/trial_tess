@@ -1,0 +1,36 @@
+#include <InCircle.c>
+
+int Orient2D(float a[2],float b[2],float c[2]) {
+
+  float orientarray[3][3];
+  
+  orientarray[0][0]=a[0];
+  orientarray[0][1]=a[1];
+  orientarray[0][2]=1.0;
+
+  orientarray[1][0]=b[0];
+  orientarray[1][1]=b[1];
+  orientarray[1][2]=1.0;
+
+  orientarray[2][0]=c[0];
+  orientarray[2][1]=c[1];
+  orientarray[2][2]=1.0;
+
+  DeterminantCalc(orientarray)
+
+  
+
+}
+
+/*====================================================================================================*/
+
+int main() {
+  
+  float a[2]={1.0,0.0};
+  float b[2]={0.0,1.0};
+  float c[2]={-1.0,0.0};
+  float d[2]={0.0,0.0};
+
+  InCircleTest(a,b,c,d);
+
+}
